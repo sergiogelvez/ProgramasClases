@@ -1,3 +1,18 @@
+# ── Archivos sin extensión (ejecutables de C++ en Linux) ──
+# Ignora todo...
+*
+# ...pero permite recorrer directorios (git no rastrea carpetas vacías)
+!*/
+# ...y vuelve a incluir todo lo que tenga extensión
+!*.*
+
+# Excepciones: archivos sin extensión que SÍ deben versionarse
+!Makefile
+!makefile
+!LICENSE
+!README
+!Dockerfile
+
 # Prerequisites
 *.d
 
@@ -41,5 +56,5 @@ __*__
 # Images
 *.png
 
-# Python 
+# Python
 .venv
