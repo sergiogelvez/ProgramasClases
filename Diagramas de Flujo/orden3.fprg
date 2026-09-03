@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="orden3"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-19 08:29:19 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMTk7MDg6MTA6MzAgQU07MTk5MA=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMTk7MDg6Mjk6MTkgQU07MTsyMTE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero1, numero2, numero3" type="Integer" array="False" size=""/>
+            <input variable="numero1"/>
+            <input variable="numero2"/>
+            <input variable="numero3"/>
+            <if expression="numero1 &lt; numero2">
+                <then>
+                    <if expression="numero2 &lt; numero3">
+                        <then>
+                            <output expression="numero1 &amp; &quot; &lt; &quot; &amp; numero2  &amp; &quot; &lt; &quot; &amp; numero3" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="numero1 &lt; numero3">
+                                <then>
+                                    <output expression="numero1 &amp; &quot; &lt; &quot; &amp; numero3  &amp; &quot; &lt; &quot; &amp; numero2" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="numero3 &amp; &quot; &lt; &quot; &amp; numero1  &amp; &quot; &lt; &quot; &amp; numero2" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="numero2 &lt; numero3">
+                        <then>
+                            <if expression="numero1 &lt; numero3">
+                                <then>
+                                    <output expression="numero2 &amp; &quot; &lt; &quot; &amp; numero1 &amp; &quot; &lt; &quot; &amp; numero3" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="numero2 &amp; &quot; &lt; &quot; &amp; numero3  &amp; &quot; &lt; &quot; &amp; numero1" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="numero3 &amp; &quot; &lt; &quot; &amp; numero2  &amp; &quot; &lt; &quot; &amp; numero1" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="suma0_2"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-19 08:53:20 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMTk7MDg6NTI6NDcgQU07MjAwNA=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMTk7MDg6NTI6NDkgQU07MTtDRU5USUM7SEIyLTI7MjAyNi0wOC0xOTswODo0NzoyMCBBTTtzdW1hMF8xLmZwcmc7NTMzOA=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMTk7MDg6NTM6MjAgQU07MTsyMTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="suma, elemento" type="Integer" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="elemento" expression="230"/>
+            <while expression="elemento != 0">
+                <input variable="elemento"/>
+                <assign variable="suma" expression="suma + elemento"/>
+            </while>
+            <output expression="suma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="prom1"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-19 09:18:40 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMTk7MDk6MTI6MDQgQU07MTk5NA=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMTk7MDk6MTg6NDAgQU07MTsyMTA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="elem, suma, promedio" type="Real" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <input variable="n"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt; n">
+                <input variable="elem"/>
+                <assign variable="suma" expression="suma + elem"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="promedio" expression="suma / n"/>
+            <output expression="promedio" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
