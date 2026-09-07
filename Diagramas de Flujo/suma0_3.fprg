@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="suma0_3"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-19 08:55:05 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMTk7MDg6NTM6NDQgQU07MjAwMg=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMTk7MDg6NTU6MDUgQU07MTsyMTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="suma, elemento" type="Integer" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <do expression="elemento != 0">
+                <input variable="elemento"/>
+                <assign variable="suma" expression="suma + elemento"/>
+            </do>
+            <output expression="suma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
