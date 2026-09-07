@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="primosN"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-02 07:44:01 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDktMDI7MDc6MTI6MDUgQU07MTk4Ng=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDktMDI7MDc6NDQ6MDEgQU07ODsyMTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, num, i, divisores, ultimop" type="Integer" array="False" size=""/>
+            <declare name="encontrado" type="Boolean" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="num" expression="n"/>
+            <assign variable="encontrado" expression="false"/>
+            <while expression="encontrado == false">
+                <assign variable="divisores" expression="0"/>
+                <for variable="i" start="2" end="num - 1" direction="inc" step="1">
+                    <if expression="num % i == 0">
+                        <then>
+                            <assign variable="divisores" expression="divisores + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="divisores &gt; 0">
+                    <then>
+                        <assign variable="num" expression="num + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="ultimop" expression="num"/>
+                        <assign variable="encontrado" expression="true"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="ultimop" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

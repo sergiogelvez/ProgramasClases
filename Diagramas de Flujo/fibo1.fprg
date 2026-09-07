@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fibo1"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-02 08:01:32 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDktMDI7MDc6NTI6MjggQU07MTk5NQ=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDktMDI7MDg6MDE6MzIgQU07MzsyMDk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ultimo, penultimo, suma, i, nterminos" type="Integer" array="False" size=""/>
+            <input variable="nterminos"/>
+            <assign variable="penultimo" expression="0"/>
+            <assign variable="ultimo" expression="1"/>
+            <if expression="nterminos &lt; 2">
+                <then>
+                    <if expression="nterminos == 1">
+                        <then>
+                            <output expression="penultimo" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else>
+                    <output expression="penultimo" newline="True"/>
+                    <output expression="ultimo" newline="True"/>
+                </else>
+            </if>
+            <for variable="i" start="2" end="nterminos - 1" direction="inc" step="1">
+                <assign variable="suma" expression="ultimo + penultimo"/>
+                <assign variable="penultimo" expression="ultimo"/>
+                <assign variable="ultimo" expression="suma"/>
+                <output expression="ultimo" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
