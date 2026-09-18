@@ -1,3 +1,5 @@
+import math as m
+
 filas = int(input("Cuantas filas quiere calcular: "))
 
 i = 0
@@ -7,23 +9,11 @@ while i <= filas :
         n = i
         r = j
         # calcular factorial de n
-        factn = 1
-        while n > 0:
-            factn = factn * n 
-            n = n - 1
-
+        factn = m.factorial(n)
         #factorial de r
-        factr = 1
-        while r > 0:
-            factr = factr * r 
-            r = r - 1
-
-        nr = i - j
-        factnr = 1
-        while nr > 0:
-            factnr = factnr * nr 
-            nr = nr - 1
-
+        factr = m.factorial(r)
+        factnr = m.factorial(n - r)
+        
         # calculo del numero
         ncomb = (factn)/(factr * factnr)
         print(f"({i},{j})={ncomb}", end=" ")

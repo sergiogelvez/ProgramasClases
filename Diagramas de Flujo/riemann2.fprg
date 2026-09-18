@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="riemann2"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-26 08:57:37 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDg6NTY6NTIgQU07MjAwMg=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDg6NTY6NTUgQU07MTtDRU5USUM7SEIyLTI7MjAyNi0wOC0yNjswODo0NTozMSBBTTtyaWVtYW5uMS5mcHJnOzU1MDA="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDg6NTc6MzcgQU07MTsyMTE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="a, b, suma, x, dx, fx" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="n"/>
+            <assign variable="dx" expression="(b - a)/n"/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="x" expression="a"/>
+            <while expression="x &lt;= b">
+                <assign variable="fx" expression="sin(x)^2 + x"/>
+                <assign variable="suma" expression="suma + fx * dx"/>
+                <assign variable="x" expression="x + dx"/>
+            </while>
+            <output expression="suma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

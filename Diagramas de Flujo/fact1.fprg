@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fact1"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-26 08:03:13 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDc6NTU6MzIgQU07MTk5OA=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDg6MDM6MTMgQU07MTsyMDk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, fact" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="fact" expression="1"/>
+            <while expression="n &gt; 0">
+                <assign variable="fact" expression="fact * n"/>
+                <assign variable="n" expression="n - 1"/>
+            </while>
+            <output expression="fact" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

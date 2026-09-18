@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="invertircad"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-26 09:24:49 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDk6MTU6MTQgQU07MTk5Ng=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDk6MjQ6NDkgQU07NDsyMTE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, resultado" type="String" array="False" size=""/>
+            <declare name="i, n" type="Integer" array="False" size=""/>
+            <input variable="numero"/>
+            <assign variable="n" expression="Len(numero)"/>
+            <assign variable="resultado" expression="&quot;&quot;"/>
+            <for variable="i" start="0" end="n - 1" direction="inc" step="1">
+                <output expression="Char(numero, i)" newline="True"/>
+                <assign variable="resultado" expression="Char(numero, i) &amp; resultado"/>
+            </for>
+            <output expression="resultado" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

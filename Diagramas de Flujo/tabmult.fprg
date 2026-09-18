@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="tabmult"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-26 07:44:58 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDc6Mzc6MTYgQU07MjAwMA=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDc6NDQ6NTggQU07NDsyMTE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, i, mult, limsup, liminf" type="Integer" array="False" size=""/>
+            <input variable="numero"/>
+            <input variable="liminf"/>
+            <input variable="limsup"/>
+            <if expression="liminf &lt; limsup">
+                <then>
+                    <for variable="i" start="liminf" end="limsup" direction="inc" step="1">
+                        <assign variable="mult" expression="numero * i"/>
+                        <output expression="numero &amp; &quot; X &quot; &amp; i &amp; &quot; = &quot; &amp; mult" newline="True"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="i" start="liminf" end="limsup" direction="dec" step="1">
+                        <assign variable="mult" expression="numero * i"/>
+                        <output expression="numero &amp; &quot; X &quot; &amp; i &amp; &quot; = &quot; &amp; mult" newline="True"/>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

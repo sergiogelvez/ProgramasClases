@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="tablas"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-26 07:54:15 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDc6NDY6MDAgQU07MTk5Mw=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDc6NDY6MDMgQU07MTtDRU5USUM7SEIyLTI7MjAyNi0wOC0yNjswNzozNzoxNiBBTTt0YWJtdWx0LmZwcmc7NTQ2MA=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDc6NTQ6MTUgQU07MzsyMTA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numinf, numsup, i, mult, limsup, liminf, j" type="Integer" array="False" size=""/>
+            <input variable="numinf"/>
+            <input variable="numsup"/>
+            <input variable="liminf"/>
+            <input variable="limsup"/>
+            <for variable="j" start="numinf" end="numsup" direction="inc" step="1">
+                <output expression="&quot;Tabla del &quot; &amp; j" newline="True"/>
+                <if expression="liminf &lt; limsup">
+                    <then>
+                        <for variable="i" start="liminf" end="limsup" direction="inc" step="1">
+                            <assign variable="mult" expression="j * i"/>
+                            <output expression="j &amp; &quot; X &quot; &amp; i &amp; &quot; = &quot; &amp; mult" newline="True"/>
+                        </for>
+                    </then>
+                    <else>
+                        <for variable="i" start="liminf" end="limsup" direction="dec" step="1">
+                            <assign variable="mult" expression="j * i"/>
+                            <output expression="j &amp; &quot; X &quot; &amp; i &amp; &quot; = &quot; &amp; mult" newline="True"/>
+                        </for>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

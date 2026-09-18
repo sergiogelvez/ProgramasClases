@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="promediopar"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-26 07:35:22 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDc6Mjk6MTIgQU07MTk5Nw=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDc6MzU6MjIgQU07MjsyMTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="suma, numelem, elem, numpar, i" type="Integer" array="False" size=""/>
+            <declare name="promedio" type="Real" array="False" size=""/>
+            <input variable="numelem"/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="numpar" expression="0"/>
+            <for variable="i" start="1" end="numelem" direction="inc" step="1">
+                <input variable="elem"/>
+                <if expression="elem % 2 == 0">
+                    <then>
+                        <assign variable="suma" expression="suma + elem"/>
+                        <assign variable="numpar" expression="numpar + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="numpar &gt; 0">
+                <then>
+                    <assign variable="promedio" expression="suma / numpar"/>
+                    <output expression="promedio" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;No hubo elementos pares&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

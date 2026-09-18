@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="promedioaprob"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-26 07:25:56 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDc6MTk6MDAgQU07MTk5Mw=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDc6MjU6NTYgQU07MTsyMTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numnotas, i" type="Integer" array="False" size=""/>
+            <declare name="suma, promedio, nota" type="Real" array="False" size=""/>
+            <input variable="numnotas"/>
+            <assign variable="suma" expression="0"/>
+            <for variable="i" start="0" end="numnotas - 1" direction="inc" step="1">
+                <input variable="nota"/>
+                <assign variable="suma" expression="suma + nota"/>
+            </for>
+            <assign variable="promedio" expression="suma / numnotas"/>
+            <output expression="promedio" newline="True"/>
+            <if expression="promedio &gt;= 3">
+                <then>
+                    <output expression="&quot;aprob&#243;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;reprob&#243;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="pileibniz"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-26 08:34:41 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDg6Mjc6NDUgQU07MjAwMg=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDg6Mjc6NDkgQU07MTtDRU5USUM7SEIyLTI7MjAyNi0wOC0yNjswODoyNDoyNyBBTTtzdW1hdG9yaWEuZnByZzs1Njg5"/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDg6MzQ6NDEgQU07MzsyMTA2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Real" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="suma" expression="0"/>
+            <for variable="i" start="0" end="n" direction="inc" step="1">
+                <assign variable="suma" expression="suma + ((-1)^i)/(2 * i + 1)"/>
+            </for>
+            <output expression="suma*4" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

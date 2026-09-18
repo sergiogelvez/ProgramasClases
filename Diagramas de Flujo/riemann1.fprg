@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="riemann1"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-26 08:54:47 AM"/>
+        <attribute name="created" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDg6NDU6MzEgQU07MTk5Nw=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMi0yOzIwMjYtMDgtMjY7MDg6NTQ6NDcgQU07MjsyMTEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="a, b, suma, x, dx, fx" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="n"/>
+            <assign variable="dx" expression="(b - a)/n"/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="x" expression="a"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="x" expression="a + i * dx"/>
+                <assign variable="fx" expression="sin(x)^2 + x"/>
+                <assign variable="suma" expression="suma + fx * dx"/>
+            </for>
+            <output expression="suma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
