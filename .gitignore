@@ -56,5 +56,60 @@ __*__
 # Images
 *.png
 
-# Python
-.venv
+# ===== Python =====
+
+# Bytecode / caché
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Entornos virtuales (venv, virtualenv, pipenv, poetry)
+venv/
+.venv/
+env/
+.ENV/
+ENV/
+env.bak/
+venv.bak/
+Pipfile.lock   # solo si usas Poetry/pipenv y NO quieres versionar el lock
+
+# Distribución / empaquetado
+build/
+dist/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Instaladores y paquetes compilados
+wheels/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Herramientas de pruebas y cobertura
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+coverage.xml
+
+# Type checking / linting
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Notebooks de Jupyter (opcional)
+.ipynb_checkpoints/
+
+# Variables de entorno y secretos
+.env
+.env.*
+
+# Entornos de editors (si ya los tienes de la parte de C++, evita duplicar)
+.idea/
