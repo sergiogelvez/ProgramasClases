@@ -24,7 +24,7 @@ def matrix_product(mat_a, mat_b):
 def matrix_product_par(mat_a, mat_b):
     """Returns the product of the matrices mat_a and mat_b."""
 
-    sset_num_threads(8);
+    set_num_threads(8);
 
     m = mat_a.shape[0]
     n = mat_b.shape[1]
@@ -42,8 +42,8 @@ def matrix_product_par(mat_a, mat_b):
 
     return mat_c
 
-a = np.random.randn(10, 10)
-b = np.random.randn(10, 10)
+a = np.random.randn(100, 100)
+b = np.random.randn(100, 100)
 
 c_actual_par = matrix_product(a, b)
 #segunda corrida
