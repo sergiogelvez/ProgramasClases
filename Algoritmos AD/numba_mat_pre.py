@@ -45,10 +45,10 @@ def matrix_product_par(mat_a, mat_b):
 a = np.random.randn(100, 100)
 b = np.random.randn(100, 100)
 
-c_actual_par = matrix_product(a, b)
+c_actual_par = matrix_product_par(a, b)
 #segunda corrida
 t_ini = perf_counter_ns()
-c_actual_par = matrix_product(a, b)
+c_actual_par = matrix_product_par(a, b)
 t_fin = perf_counter_ns()
 t_par = t_fin - t_ini
 
